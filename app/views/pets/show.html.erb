@@ -1,0 +1,27 @@
+<div class="container">
+
+  <h1>Details about <%= @pet.name %></h1>
+  <%#= line_chart @stats.pluck(:time, :value), xtitle: "Time", ytitle: "Value" %>
+  <%#= scatter_chart @stats.group_by_month(:time).maximum(:value) %>
+  <% data = @stats.map{|s| [s.time, s.value]} %>
+  <%#= @stats_by_month %>
+  <%= scatter_chart @stats_by_month %>
+
+  <%#= scatter_chart data, xtitle: "Time", ytitle: "Value" %>
+
+</div>
+
+
+<% if false %>
+
+  <div class="cards">
+    <% @stats.each do |stat| %>
+      <div class="card">
+        <p><%= stat.category %></p>
+        <p><%= stat.value %></p>
+        <p><%= stat.time %></p>
+      </div>
+    <% end %>
+  </div>
+
+<% end %>

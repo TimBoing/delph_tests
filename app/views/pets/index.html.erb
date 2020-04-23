@@ -1,0 +1,69 @@
+<nav>
+  <div class="nav-wrapper deep-orange">
+    <a href="#" class="brand-logo">Interpet</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="pet-cards">
+    <% @pets.each do |pet| %>
+      <div class="pet-card">
+        <%= link_to pet_path(pet), class: "pet-image" do %>
+          <%= image_tag @img_placeholder %>
+        <% end %>
+        <p class= "pet-name"><%= pet.name %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="tim-sidenav-background">
+</div>
+<div class="tim-sidenav">
+  <div class="tim-sidenav-content-top"></div>
+  <div class="tim-sidenav-content-mid">
+    <ul>
+      <li><a class="tim-sidenav-link waves-effect" href="#!"><i class="material-icons">mic</i>Translator</a></li>
+      <li><a class="tim-sidenav-link waves-effect" href="#!">Summary</a></li>
+      <li><a class="tim-sidenav-link waves-effect" href="#!">Sources</a></li>
+      <li><a class="tim-sidenav-link waves-effect" href="#!">Calendar</a></li>
+      <li><a class="tim-sidenav-link waves-effect" href="#!">Alert Journal</a></li>
+    </ul>
+
+  </div>
+  <div class="tim-sidenav-content-bottom">
+    <ul>
+      <li><a class="tim-sidenav-link waves-effect" href="#!">Profile Settings</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<a id="action-button" class="action-button btn-floating btn-large waves-effect waves-light cyan lighten-2"><i class="material-icons">add</i></a>
+<div class="bottom-action-bar deep-orange"></div>
+
+
+
+
+
+<!-- <div class="container">
+  <h1>Your Dashboard</h1>
+  <%#= link_to "Add a pet", new_pet_path  %>
+  <div class="cards">
+    <%# @pets.each do |pet| %>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="<%= @img_placeholder %>" alt="Card image cap">
+        <div class="card-body">
+          <p class= "card-text"><%#= pet.name %></p>
+          <p class= "card-text"><%#= pet.pet_type %></p>
+          <p class= "card-text"><%#= pet.gender %></p>
+          <p class= "card-text"><%#= pet.breed %></p>
+          <p class= "card-text"><%#= pet.birth_date %></p>
+          <%#= link_to "Détails", pet_path(pet)  %>
+
+        </div>
+      </div>
+    <%# end %>
+  </div>
+</div>
+ -->
