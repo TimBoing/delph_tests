@@ -5,13 +5,13 @@
 </nav>
 
 <div class="container">
-  <div class="pet-cards">
+  <div class="pet-cards centered-vertically">
     <% @pets.each do |pet| %>
       <div class="pet-card">
         <%= link_to pet_path(pet), class: "pet-image" do %>
           <%= image_tag @img_placeholder %>
         <% end %>
-        <p class= "pet-name"><%= pet.name %></p>
+        <span><%= pet.name.upcase %></span>
       </div>
     <% end %>
   </div>

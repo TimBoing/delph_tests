@@ -1,11 +1,30 @@
+.pet-cards{
+  padding-top: 56px;
+  padding-bottom: 56px;
+
+}
+
 .pet-card{
-  width: 200px;
+  position: relative;
+  width: 80%;
+  border-radius: 16px;
 
   a{
-    width: 200px;
+    width: 100%;
 
     img{
-       width: 200px;
+       width: 100%;
+       border-radius: 16px;
     }
+  }
+
+  span{
+    position: absolute;
+    color: white;
+    z-index: 2;
+    font-size: 32px;
+    font-weight: bold;
+    top: 35%;
+    left: 35%;
   }
 }
