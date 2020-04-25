@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.6.5'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'materialize-sass'
 
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
