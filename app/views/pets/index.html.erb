@@ -9,7 +9,11 @@
     <% @pets.each do |pet| %>
       <div class="pet-card">
         <%= link_to pet_path(pet), class: "pet-image" do %>
-          <%= image_tag @img_placeholder %>
+          <% if pet.photo.attached? %>
+            <%= cl_image_tag pet.photo.key %>
+          <% else %>
+            <%= image_tag @img_placeholder %>
+          <% end %>
         <% end %>
         <span><%= pet.name.upcase %></span>
       </div>

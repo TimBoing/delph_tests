@@ -8,6 +8,8 @@
                               order: [:day, :month, :year] %>
     <%= f.input :gender, as: :radio_buttons, collection: ['Female', 'Male'] %>
     <%= f.input :breed %>
+
+    <%= f.input :photo, as: :file %>
     <%= f.button :submit %>
   <% end %>
 </div>
