@@ -6,13 +6,15 @@ const initSideNav = () => {
   const sideNavBackground = document.querySelector('.tim-sidenav-background');
   const botBar = document.querySelector('.bottom-action-bar');
   const actionBtnIco = document.querySelector("#action-button i");
+  const actionBtnLink = document.querySelector("#action-button a");
   const optionsMenu = document.getElementById("options-menu");
 
   const slidingContent = () => {
     sideNav.style.width = "80%";
     actionBtn.classList.add('action-pushed');
     botBar.classList.add('pushed');
-    actionBtnIco.innerText = "chevron_left";
+    actionBtnLink.style.display = "none";
+    actionBtnIco.style.display = "block";
   }
 
   const unslideContent = () => {
@@ -20,7 +22,9 @@ const initSideNav = () => {
     sideNav.style.width = 0;
     actionBtn.classList.remove('action-pushed');
     botBar.classList.remove('pushed');
-    actionBtnIco.innerText = "add";
+    actionBtnLink.style.display = "flex";
+    actionBtnIco.style.display = "none";
+
   }
 
   optionsMenu.addEventListener('click', (event) => {

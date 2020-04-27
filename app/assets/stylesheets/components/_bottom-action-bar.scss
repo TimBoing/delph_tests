@@ -1,4 +1,5 @@
 .bottom-action-bar{
+  background-color: $delph-orange;
   position:-webkit-sticky;
   position:sticky;
   bottom:0;
@@ -403,6 +404,23 @@
   left: calc(50% - 28px);
   transition: all 0.5s;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+      height: 40px;
+    }
+  }
+
 }
 
 .action-pushed{
