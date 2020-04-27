@@ -195,6 +195,17 @@
       100% 100%,
       0 100%);
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  i:hover{
+    cursor: pointer;
+  }
+
 }
 
 .pushed{

@@ -6,6 +6,7 @@ const initSideNav = () => {
   const sideNavBackground = document.querySelector('.tim-sidenav-background');
   const botBar = document.querySelector('.bottom-action-bar');
   const actionBtnIco = document.querySelector("#action-button i");
+  const optionsMenu = document.getElementById("options-menu");
 
   const slidingContent = () => {
     sideNav.style.width = "80%";
@@ -22,11 +23,17 @@ const initSideNav = () => {
     actionBtnIco.innerText = "add";
   }
 
+  optionsMenu.addEventListener('click', (event) => {
+    sideNavBackground.style.display = "block";
+    slidingContent();
+  });
+
   actionBtn.addEventListener('click', (event) => {
 
     if(!actionBtn.classList.contains('action-pushed')){
-      sideNavBackground.style.display = "block";
-      slidingContent();
+      // sideNavBackground.style.display = "block";
+      // slidingContent();
+
     }else{
       unslideContent();
     }
