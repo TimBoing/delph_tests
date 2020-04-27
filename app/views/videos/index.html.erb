@@ -1,0 +1,5 @@
+<p><%= @pet.name %> videos</p>
+
+<% @videos.each do |video| %>
+  <%= cl_video_tag video.clip.key %>
+<% end %>
