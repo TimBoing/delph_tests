@@ -1,5 +1,11 @@
+
 <%= form_for(@video) do |f| %>
-  <%= f.label :clip %>
   <%= f.file_field :clip %>
+  <%#= cl_upload(:clip, resource_type: :video) %>
   <%= f.submit %>
 <% end %>
+
+
+
+
+<%#= cl_video_tag "dspfrxuigz4intaamhaq" %>

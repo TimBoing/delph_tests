@@ -1,5 +1,6 @@
-<p><%= @pet.name %> videos</p>
-
-<% @videos.each do |video| %>
-  <%= cl_video_tag video.clip.key %>
-<% end %>
+<div class="container">
+  <h1><%= @pet.name %> videos</h1>
+  <% @videos.each do |video| %>
+    <%= cl_video_tag(video.clip.key, controls: true, width: '80%', height: 300, background: 'black') %>
+  <% end %>
+</div>

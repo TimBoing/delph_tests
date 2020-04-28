@@ -14,13 +14,22 @@ class VideosController < ApplicationController
   end
 
   def create
-    video = Video.new
+
+    video = Video.new(video_params)
     video.pet = Pet.find(1)
     video.save!
+    #Cloudinary::Uploader.upload(".",:resource_type => :video)
   end
 
   def new
     @video = Video.new
+
+  end
+
+  private
+
+  def video_params
+    params.require(:video).permit(:clip)
   end
 
 end
