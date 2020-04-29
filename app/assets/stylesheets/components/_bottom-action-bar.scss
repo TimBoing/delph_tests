@@ -1,7 +1,6 @@
 .bottom-action-bar{
   background-color: $delph-orange;
-  position:-webkit-sticky;
-  position:sticky;
+  position:fixed;
   bottom:0;
   height: 56px;
   width: 100%;
@@ -398,8 +397,7 @@
 }
 
 .action-button{
-  position:-webkit-sticky;
-  position:sticky;
+  position: fixed;
   bottom: 28px;
   left: calc(50% - 28px);
   transition: all 0.5s;
