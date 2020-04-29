@@ -1,0 +1,26 @@
+/* label color */
+// .input-field label {
+//  color: #000;
+// }
+
+/* label focus color */
+// .input-field input[type=text]:focus + label {
+//  color: #000;
+// }
+
+/* label underline focus color */
+
+input#user_username:focus,input#user_email:focus,input#user_password:focus,input#user_password_confirmation:focus {
+ border-bottom: 1px solid $delph-orange;
+ box-shadow: 0 1px 0 0 $delph-orange;
+}
+
+// .form-group.string.required:focus{
+//   border-bottom: 1px solid $delph-orange;
+//   box-shadow: 0 1px 0 0 #000;
+
+// }
+
+#new_user{
+  width: 80%;
+}
