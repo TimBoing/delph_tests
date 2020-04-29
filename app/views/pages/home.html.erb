@@ -1,32 +1,25 @@
-<nav class="nav-extended" >
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a>A link</a></li>
-        <li><a>A second link</a></li>
-        <li><a>A third link</a></li>
-      </ul>
-    </div>
-    <div class="nav-content">
-      <span class="nav-title">Title</span>
-      <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal">
-        <i class="material-icons">add</i>
-      </a>
-    </div>
-  </nav>
+<div class="orange-background">
+  <div class="logo-container">
+    <%= image_tag 'logo_white.png', alt: "alttext" %>
+  </div>
+  <div class="paws-container">
+    <i id="paw-1" class="material-icons">pets</i>
+    <i id="paw-2" class="material-icons">pets</i>
+    <i id="paw-3" class="material-icons">pets</i>
+    <i id="paw-4" class="material-icons">pets</i>
+    <i id="paw-5" class="material-icons">pets</i>
+    <i id="paw-6" class="material-icons">pets</i>
+    <i id="paw-7" class="material-icons">pets</i>
+    <i id="paw-8" class="material-icons">pets</i>
+    <i id="paw-9" class="material-icons">pets</i>
+    <i id="paw-10" class="material-icons">pets</i>
+  </div>
+  <div class="login-buttons-container">
+    <%= link_to "LOGIN", new_user_session_path, class: "button-white waves-effect"  %>
+    <%= link_to "NEW ACCOUNT", new_user_registration_path, class: "button-white waves-effect"  %>
+    <% if user_signed_in? %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% end %>
+  </div>
 
-
-<div class="container">
-
-
-  <!-- <div class="banner-container">
-    <#%= image_tag "logo_orange.png" %>
-    <a class="btn btn-primary" href="#">Enter</a>
-    <#%= link_to "Enter", pets_path %>
-  </div> -->
-
-
-<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
 </div>
-
-

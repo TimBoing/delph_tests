@@ -1,1 +1,88 @@
-// Specific CSS for your home-page
+.orange-background{
+  height: 100vh;
+  width: 100vw;
+  background-color: $delph-orange;
+
+}
+
+.logo-container{
+  height: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img{
+    width: 100%;
+  }
+}
+
+.paws-container{
+  position: relative;
+  height: 33%;
+
+  i{
+    position: absolute;
+    color: white;
+    font-size: 32px;
+  }
+}
+
+.login-buttons-container{
+  height: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#paw-1{
+  transform: rotate(70deg);
+  top: 80%;
+  left: 5%;
+}
+
+#paw-2{
+  transform: rotate(70deg);
+  top: 60%;
+  left: 15%;
+}
+#paw-3{
+  transform: rotate(70deg);
+  top: 70%;
+  left: 30%;
+}
+#paw-4{
+  transform: rotate(80deg);
+  top: 45%;
+  left: 35%;
+}
+#paw-5{
+  transform: rotate(100deg);
+  top: 65%;
+  left: 50%;
+}
+#paw-6{
+  transform: rotate(100deg);
+  top: 45%;
+  left: 55%;
+}
+#paw-7{
+  transform: rotate(70deg);
+  top: 65%;
+  left: 70%;
+}
+#paw-8{
+  transform: rotate(60deg);
+  top: 35%;
+  left: 70%;
+}
+#paw-9{
+  transform: rotate(50deg);
+  top: 40%;
+  left: 85%;
+}
+#paw-10{
+  transform: rotate(50deg);
+  top: 10%;
+  left: 90%;
+}
