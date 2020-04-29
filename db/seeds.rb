@@ -10,6 +10,7 @@ require 'faker'
 puts "Starting seed"
 
 u = User.new
+u.username = "Tim"
 u.email = "tim@tim.com"
 u.password = "timtim"
 u.save!

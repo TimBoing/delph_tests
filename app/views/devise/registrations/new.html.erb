@@ -1,3 +1,5 @@
+<!-- NEW ACCOUNT -->
+
 <div class="navbar-tim">
   <%= image_tag "white_foot.png", alt: "alttext" %>
 </div>
@@ -8,6 +10,9 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
+      <%= f.input :username,
+      required: true,
+      autofocus: true %>
       <%= f.input :email,
                   required: true,
                   autofocus: true,
