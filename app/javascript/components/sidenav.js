@@ -1,3 +1,5 @@
+import {actionBtnVideo} from './newVideo.js'
+
 const initSideNav = () => {
 
   const actionBtn = document.getElementById("action-button");
@@ -35,6 +37,8 @@ const initSideNav = () => {
   actionBtn.addEventListener('click', (event) => {
     if(actionBtn.classList.contains('action-pushed')){
       unslideContent();
+    }else{
+      actionBtnVideo();
     }
   });
 
