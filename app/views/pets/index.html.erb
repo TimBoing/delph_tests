@@ -4,6 +4,7 @@
 
 
 <div class="container">
+
   <div class="pet-cards centered-vertically">
     <% @pets.each do |pet| %>
       <div class="pet-card">
@@ -43,16 +44,24 @@
 </div>
 
 
+
 <div id="action-button" class="action-button btn-floating btn-large waves-effect waves-light cyan lighten-2">
   <i class="material-icons" style="display: none">chevron_left</i>
-  <%= link_to new_video_path  do%>
-    <%= image_tag 'white_foot.png' %>
-  <% end %>
+  <%= image_tag 'white_foot.png' %>
 </div>
 
 <div class="bottom-action-bar">
   <i id="options-menu" class="material-icons">dehaze</i>
   <i class="material-icons">add</i>
+</div>
+
+<div id="video-confirmation" class="modal-video">
+  <div class="modal-video-content">
+    <%= form_for(@video) do |f| %>
+      <%= f.file_field :clip, id: 'file-upload' %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 </div>
 
 

@@ -6,14 +6,14 @@ const initSideNav = () => {
   const sideNavBackground = document.querySelector('.tim-sidenav-background');
   const botBar = document.querySelector('.bottom-action-bar');
   const actionBtnIco = document.querySelector("#action-button i");
-  const actionBtnLink = document.querySelector("#action-button a");
+  const actionBtnImg = document.querySelector("#action-button img");
   const optionsMenu = document.getElementById("options-menu");
 
   const slidingContent = () => {
     sideNav.style.width = "80%";
     actionBtn.classList.add('action-pushed');
     botBar.classList.add('pushed');
-    actionBtnLink.style.display = "none";
+    actionBtnImg.style.display = "none";
     actionBtnIco.style.display = "block";
   }
 
@@ -22,7 +22,7 @@ const initSideNav = () => {
     sideNav.style.width = 0;
     actionBtn.classList.remove('action-pushed');
     botBar.classList.remove('pushed');
-    actionBtnLink.style.display = "flex";
+    actionBtnImg.style.display = "flex";
     actionBtnIco.style.display = "none";
 
   }
@@ -33,15 +33,9 @@ const initSideNav = () => {
   });
 
   actionBtn.addEventListener('click', (event) => {
-
-    if(!actionBtn.classList.contains('action-pushed')){
-      // sideNavBackground.style.display = "block";
-      // slidingContent();
-
-    }else{
+    if(actionBtn.classList.contains('action-pushed')){
       unslideContent();
     }
-
   });
 
   sideNavBackground.addEventListener('click', (event) => {
@@ -54,3 +48,4 @@ export{initSideNav};
   // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
   // var collapsibleElem = document.querySelector('.collapsible');
   // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+

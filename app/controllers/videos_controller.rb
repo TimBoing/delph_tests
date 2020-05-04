@@ -17,7 +17,9 @@ class VideosController < ApplicationController
 
     video = Video.new(video_params)
     video.pet = Pet.find(1)
-    video.save!
+    if video.save
+      redirect_to pet_videos_path(video.pet)
+    end
     #Cloudinary::Uploader.upload(".",:resource_type => :video)
   end
 
