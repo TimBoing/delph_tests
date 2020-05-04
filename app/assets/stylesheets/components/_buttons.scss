@@ -29,3 +29,33 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 
 }
+
+.button-red{
+  background-color: red;
+  color: white;
+  margin: 10px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.button-blue{
+  background-color: $delph-blue;
+  color: white;
+  margin: 10px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}

@@ -56,10 +56,14 @@
 </div>
 
 <div id="video-confirmation" class="modal-video">
-  <div class="modal-video-content">
-    <%= form_for(@video) do |f| %>
-      <%= f.file_field :clip, id: 'file-upload' %>
-      <%= f.submit %>
+  <div class="modal-video-content centered-vertically">
+    <div id="upload-progress" class="progress">
+      <div class="indeterminate"></div>
+    </div>
+    <div id ="cancel-upload" class="button-blue">CANCEL UPLOAD</div>
+    <%= simple_form_for(@video) do |f| %>
+      <%= f.input :clip,as: :file, input_html: {id: 'file-upload'} %>
+      <%= f.button :submit, "Upload Video", class: "button-orange", id: "upload-button" %>
     <% end %>
   </div>
 </div>

@@ -24,3 +24,14 @@ input#user_username:focus,input#user_email:focus,input#user_password:focus,input
 #new_user{
   width: 80%;
 }
+
+#new_video{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  #file-upload, label{
+    display: none;
+  }
+}
