@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     resources :videos, only: [:index, :show]
   end
 
+  get '/test', to: "pages#test"
 end

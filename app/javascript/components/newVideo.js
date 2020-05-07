@@ -38,8 +38,11 @@ const checkFile = () => {
 
 const actionBtnVideo = () => {
   fileUpload = document.getElementById("file-upload");
-  fileUpload.click();
-  myInterval = setInterval(checkFile, 250);
+  if(fileUpload){
+    fileUpload.click();
+    myInterval = setInterval(checkFile, 250);
+  }
+
 }
 
 export{newVideo};

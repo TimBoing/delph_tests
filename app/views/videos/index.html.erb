@@ -1,6 +1,35 @@
-<div class="container">
-  <h1><%= @pet.name %> videos</h1>
+<div class="navbar-tim">
+  <div class="navbar-text">
+    <div class="navbar-title">TRANSLATOR</div>
+    <div class="navbar-pet-name"><%= @pet.name %></div>
+  </div>
+  <div class="navbar-logo-container centered-vertically">
+    <%= image_tag "white_foot.png", alt: "alttext" %>
+  </div>
+  <div class="pet-avatar">
+    <% if @pet.photo.attached? %>
+      <%= cl_image_tag @pet.photo.key %>
+    <% else %>
+      <%= image_tag @img_placeholder %>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="container centered-vertically">
   <% @videos.each do |video| %>
     <%= cl_video_tag(video.clip.key, controls: true, width: '80%', height: 300, background: 'black') %>
   <% end %>
+</div>
+
+<%= render 'shared/sidenav' %>
+
+<div id="action-button" class="action-button btn-floating btn-large waves-effect waves-light cyan lighten-2">
+  <i class="material-icons" style="display: none">chevron_left</i>
+  <%= image_tag 'white_foot.png' %>
+</div>
+
+<div class="bottom-action-bar">
+  <i id="options-menu" class="material-icons">dehaze</i>
+  <!-- <i class="material-icons">add</i> -->
 </div>

@@ -1,0 +1,22 @@
+<div class="tim-sidenav-background">
+</div>
+<div class="tim-sidenav">
+  <div class="tim-sidenav-content-top"></div>
+  <div class="tim-sidenav-content-mid">
+    <ul>
+      <li><a class="tim-sidenav-link waves-effect waves-light" href=<%= pets_path %>><i class="material-icons">pets</i>My Pets</a></li>
+      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!"><i class="material-icons">mic</i>Translator</a></li>
+      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!">Summary</a></li>
+      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!">Sources</a></li>
+      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!">Calendar</a></li>
+      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!">Alert Journal</a></li>
+    </ul>
+
+  </div>
+  <div class="tim-sidenav-content-bottom">
+    <ul>
+      <li><a class="tim-sidenav-link waves-effect" href="#!">Profile Settings</a></li>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "tim-sidenav-link waves-effect" %></li>
+    </ul>
+  </div>
+</div>

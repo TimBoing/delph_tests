@@ -2,6 +2,8 @@ class VideosController < ApplicationController
   def index
     @pet = Pet.find(params[:pet_id])
     @videos = @pet.videos
+    @img_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+
   end
 
   def show
