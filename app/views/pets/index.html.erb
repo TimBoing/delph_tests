@@ -10,14 +10,18 @@
   <div class="pet-cards centered-vertically">
     <% @pets.each do |pet| %>
       <div class="pet-card">
-        <%= link_to pet_path(pet), class: "pet-image" do %>
-          <% if pet.photo.attached? %>
-            <%= cl_image_tag pet.photo.key %>
-          <% else %>
-            <%= image_tag @img_placeholder %>
-          <% end %>
+
+        <% if pet.photo.attached? %>
+          <%= cl_image_tag pet.photo.key %>
+        <% else %>
+          <%= image_tag @img_placeholder %>
         <% end %>
-        <span><%= pet.name.upcase %></span>
+
+        <%= link_to pet_path(pet), class: "pet-image" do %>
+          <div class="pet-card-name-container">
+            <span><%= pet.name.upcase %></span>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
@@ -32,7 +36,9 @@
 
 <div class="bottom-action-bar">
   <i id="options-menu" class="material-icons">dehaze</i>
-  <i class="material-icons">add</i>
+  <%= link_to new_pet_path do  %>
+    <i class="material-icons" style="color: white">add</i>
+  <% end %>
 </div>
 
 <div id="video-confirmation" class="modal-video">

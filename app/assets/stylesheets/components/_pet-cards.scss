@@ -7,24 +7,55 @@
 .pet-card{
   position: relative;
   width: 80%;
+  height: 40vh;
   border-radius: 16px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  margin: 10px;
 
-  a{
+
+  img{
+    width: 100%; /* or any custom size */
+    height: 100%;
+    object-fit: contain;
+    border-radius: 16px;
+  }
+
+
+  .pet-card-name-container{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    img{
-       width: 100%;
-       border-radius: 16px;
+    span{
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      text-shadow: 0 2px 3px rgba(0,0,0,0.3);
+      transition: all 0.5s;
+
+    }
+
+    &:hover{
+      span{
+        font-size: 40px;
+      }
     }
   }
-
-  span{
-    position: absolute;
-    color: white;
-    z-index: 2;
-    font-size: 32px;
-    font-weight: bold;
-    top: 35%;
-    left: 35%;
-  }
+  // span{
+  //   position: absolute;
+  //   color: white;
+  //   z-index: 2;
+  //   font-size: 32px;
+  //   font-weight: bold;
+  //   top: 35%;
+  //   left: 35%;
+  // }
 }
+

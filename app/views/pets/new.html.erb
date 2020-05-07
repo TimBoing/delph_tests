@@ -1,16 +1,61 @@
-<div class="container">
-  <h1>Add a new pet to your list!</h1>
+<div class="navbar-tim">
+  <div class="navbar-logo-container centered-vertically">
+    <%= image_tag "white_foot.png", alt: "alttext" %>
+  </div>
+</div>
+
+<div class="container centered-vertically">
+  <p class="blue-title">REGISTER A NEW PET</p>
+
   <%= simple_form_for @pet do |f| %>
     <%= f.input :name %>
     <%= f.input :pet_type, collection: ["Cat", "Dog"], selected: "Cat" %>
-    <%= f.input :birth_date, as: :date, start_year: Date.today.year,
+    <%= f.input :gender, collection: ['Female', 'Male'], selected: "Female" %>
+    <%#= f.input :birth_date, as: :date, start_year: Date.today.year,
                               end_year: Date.today.year - 100, discard_day: false,
                               order: [:day, :month, :year] %>
-    <%= f.input :gender, as: :radio_buttons, collection: ['Female', 'Male'] %>
+
+    <%= f.input :birth_date, input_html: {class: "datepicker"} %>
     <%= f.input :breed %>
 
     <%= f.input :photo, as: :file %>
     <%= f.button :submit %>
   <% end %>
+
+
+<!--
+  <form action="/pets" accept-charset="UTF-8" method="post">
+    <%#= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <label for="pet_name">Name</label>
+    <input type="text" name="pet[name]">
+
+    <div class="input-field">
+      <select name="pet[pet_type]">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="Cat">Cat</option>
+        <option value="Dog">Dog</option>
+      </select>
+      <label>Materialize Select</label>
+    </div>
+
+    <label for="pet_birth_date">Pet Birthday</label>
+    <input type="text" class="datepicker" name="pet[birth_date]">
+
+    <div class="input-field">
+      <select name="pet[gender]">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <label>Gender</label>
+    </div>
+
+
+    <input class="form-control-file is-valid file optional" type="file" name="pet[photo]" id="pet_photo">
+    <input type="submit" name="commit" value="Add Pet" data-disable-with="Create Restaurant">
+  </form> -->
+
+
 </div>
+
 
