@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   end
 
   get '/test', to: "pages#test"
+
+  get '/adri', to: 'pages#adri'
 end
+

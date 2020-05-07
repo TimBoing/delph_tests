@@ -10,4 +10,8 @@ class PagesController < ApplicationController
   def test
     FakeJob.perform_later
   end
+
+  def adri
+    @dridrou = 42
+  end
 end
