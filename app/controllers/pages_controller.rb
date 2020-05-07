@@ -8,19 +8,6 @@ class PagesController < ApplicationController
   end
 
   def test
-    puts "waiting 10 sec"
-    sleep 10
-    puts "waiting 10 sec more"
-    waitingTen
-  end
-
-  def waitingTen
-    sleep 10
-    puts "waiting 11 sec more"
-    waitingElevenMore
-  end
-
-  def waitingElevenMore
-    sleep 11
+    FakeJob.perform_later
   end
 end
