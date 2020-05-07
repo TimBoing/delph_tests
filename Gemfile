@@ -4,6 +4,8 @@ ruby '2.6.5'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
 
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
 gem 'materialize-sass'
 
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
