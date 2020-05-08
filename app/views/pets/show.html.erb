@@ -23,31 +23,34 @@
   </ul>
 </div>
 
+<!-- STATS----------------------------- -->
+
 <div class="container">
   <%#= line_chart @stats.pluck(:time, :value), xtitle: "Time", ytitle: "Value" %>
   <%#= scatter_chart @stats.group_by_month(:time).maximum(:value) %>
-  <% data = @stats.map{|s| [s.time, s.value]} %>
+  <%# data = @stats.map{|s| [s.time, s.value]} %>
   <%#= @stats_by_month %>
-  <%= scatter_chart @stats_by_month %>
+  <%#= scatter_chart @stats_by_month %>
 
   <%#= scatter_chart data, xtitle: "Time", ytitle: "Value" %>
 
+  <div class="stat-card">
+    <div class="stat-card-left">
+      <div class="stat-card-title">EMOTIONS</div>
+    </div>
+    <div class="stat-card-right">
+      <%= pie_chart @emotions %>
+    </div>
+  </div>
+
+  <% @activity.each do |e| %>
+    <p><%= e %></p>
+  <% end %>
 </div>
 
 
-<% if false %>
+<!-- STATS----------------------------- -->
 
-  <div class="cards">
-    <% @stats.each do |stat| %>
-      <div class="card">
-        <p><%= stat.category %></p>
-        <p><%= stat.value %></p>
-        <p><%= stat.time %></p>
-      </div>
-    <% end %>
-  </div>
-
-<% end %>
 
 <%= render 'shared/sidenav' %>
 

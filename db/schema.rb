@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_04_29_100047) do
   create_table "stats", force: :cascade do |t|
     t.bigint "pet_id"
     t.string "category"
+    t.string "sub_category"
     t.string "value"
     t.datetime "time"
     t.datetime "created_at", null: false

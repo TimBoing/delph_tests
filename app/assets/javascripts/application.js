@@ -1,5 +1,5 @@
 //= require rails-ujs
-//= require Chart.bundle
 //= require chartkick
+//= require Chart.bundle
 //= require_tree .
 //= require materialize-sprockets

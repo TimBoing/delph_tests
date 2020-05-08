@@ -1,0 +1,24 @@
+.stat-card{
+  width: 100%;
+  display: flex;
+  border-radius: 16px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  margin: 10px;
+
+  .stat-card-left{
+    width: 40%;
+    padding: 20px;
+
+    .stat-card-title{
+
+
+    }
+  }
+
+  .stat-card-right{
+    width: 60%;
+    padding: 20px;
+
+  }
+
+}
