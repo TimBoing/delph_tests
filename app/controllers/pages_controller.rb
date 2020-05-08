@@ -11,7 +11,4 @@ class PagesController < ApplicationController
     FakeJob.perform_later
   end
 
-  def adri
-    @dridrou = 42
-  end
 end

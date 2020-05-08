@@ -12,8 +12,5 @@ Rails.application.routes.draw do
     resources :videos, only: [:index, :show]
   end
 
-  get '/test', to: "pages#test"
-
-  get '/adri', to: 'pages#adri'
 end
 
