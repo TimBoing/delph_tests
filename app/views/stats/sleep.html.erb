@@ -1,0 +1,46 @@
+<div class="navbar-tim">
+  <div class="navbar-text">
+    <div class="navbar-title">SLEEP</div>
+    <div class="navbar-pet-name"><%= @pet.name %></div>
+  </div>
+  <div class="navbar-logo-container centered-vertically">
+    <%= image_tag "white_foot.png", alt: "alttext" %>
+  </div>
+  <div id="show-pet-list-trigger"class="pet-avatar">
+    <% if @pet.photo.attached? %>
+      <%= cl_image_tag @pet.photo.key %>
+    <% else %>
+      <%= image_tag @img_placeholder %>
+    <% end %>
+  </div>
+</div>
+
+<div class="pet-list-container">
+  <ul id='show-pet-list' class='pet-list'>
+    <% @pets.each do |pet| %>
+      <li class="waves-effect waves-light"><%= link_to pet.name, pet_sleep_path(pet)  %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="general-container centered-vertically">
+    <div id="chart_div" data-chart="sleep"></div>
+  </div>
+
+</div>
+
+<%= render 'shared/sidenav' %>
+
+<div id="action-button" class="action-button btn-floating btn-large waves-effect waves-light cyan lighten-2">
+  <i class="material-icons" style="display: none">chevron_left</i>
+  <%= image_tag 'white_foot.png' %>
+</div>
+
+<div class="bottom-action-bar">
+  <i id="options-menu" class="material-icons">dehaze</i>
+  <%#= link_to new_pet_path do  %>
+    <!-- <i class="material-icons" style="color: white">add</i> -->
+  <%# end %>
+</div>
+

@@ -1,14 +1,12 @@
 class StatsController < ApplicationController
+  before_action :get_common_info
 
   def index
-
-    @img_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    @pet = Pet.find(params[:pet_id])
-    @pets = current_user.pets
 
   end
 
   def emotions
+
   end
 
   def activity
@@ -41,6 +39,14 @@ class StatsController < ApplicationController
 
   def kick_plants
 
+  end
+
+  private
+
+  def get_common_info
+    @img_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    @pet = Pet.find(params[:pet_id])
+    @pets = current_user.pets
   end
 
 end
