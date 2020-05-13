@@ -1,0 +1,92 @@
+<div class="navbar-tim">
+  <div class="navbar-text">
+    <div class="navbar-title">SUMMARY</div>
+    <div class="navbar-pet-name"><%= @pet.name %></div>
+  </div>
+  <div class="navbar-logo-container centered-vertically">
+    <%= image_tag "white_foot.png", alt: "alttext" %>
+  </div>
+  <div id="show-pet-list-trigger"class="pet-avatar">
+    <% if @pet.photo.attached? %>
+      <%= cl_image_tag @pet.photo.key %>
+    <% else %>
+      <%= image_tag @img_placeholder %>
+    <% end %>
+  </div>
+</div>
+
+<div class="pet-list-container">
+  <ul id='show-pet-list' class='pet-list'>
+    <% @pets.each do |pet| %>
+      <li class="waves-effect waves-light"><%= link_to pet.name, pet_stats_path(pet)  %></li>
+    <% end %>
+  </ul>
+</div>
+
+
+<div class="container">
+  <div class="stat-lines-container centered-vertically">
+
+    <div class="stat-line">
+      <%= link_to pet_emotions_path(@pet), class: "stat-item" do  %>
+        <i class="fas fa-heart"></i>
+        <p>Emotions</p>
+      <% end %>
+      <%= link_to pet_activity_path(@pet), class: "stat-item" do  %>
+        <i class="material-icons">pets</i>
+        <p>Activity</p>
+      <% end %>
+      <%= link_to pet_sleep_path(@pet), class: "stat-item" do  %>
+        <i class="far fa-moon"></i>
+        <p>Sleep</p>
+      <% end %>
+    </div>
+
+    <div class="stat-line">
+
+      <%= link_to pet_scratching_path(@pet), class: "stat-item" do  %>
+        <i class="fas fa-mitten"></i>
+        <p>Scratching</p>
+      <% end %>
+      <%= link_to pet_weight_path(@pet), class: "stat-item" do  %>
+        <i class="fas fa-weight"></i>
+        <p>Weight</p>
+      <% end %>
+      <%= link_to pet_breathing_path(@pet), class: "stat-item" do  %>
+        <i class="fas fa-wind"></i>
+        <p>Breathing</p>
+      <% end %>
+    </div>
+
+    <div class="stat-line">
+      <%= link_to pet_butt_licking_path(@pet), class: "stat-item" do  %>
+        <i class="far fa-grin-tongue-wink"></i>
+        <p>Butt Licking</p>
+      <% end %>
+      <%= link_to pet_plotting_path(@pet), class: "stat-item" do  %>
+        <i class="fas fa-user-secret"></i>
+        <p>Plotting</p>
+      <% end %>
+      <%= link_to pet_kick_plants_path(@pet), class: "stat-item" do  %>
+        <i class="fas fa-seedling"></i>
+        <p>kicking plants</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+<%= render 'shared/sidenav' %>
+
+<div id="action-button" class="action-button btn-floating btn-large waves-effect waves-light cyan lighten-2">
+  <i class="material-icons" style="display: none">chevron_left</i>
+  <%= image_tag 'white_foot.png' %>
+</div>
+
+<div class="bottom-action-bar">
+  <i id="options-menu" class="material-icons">dehaze</i>
+  <%#= link_to new_pet_path do  %>
+    <!-- <i class="material-icons" style="color: white">add</i> -->
+  <%# end %>
+</div>
