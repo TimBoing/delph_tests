@@ -21,6 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
 
     i{
       color: $delph-orange;
@@ -43,5 +44,15 @@
       transform: scale(1.1);
     }
 
+
+
+  }
+
+  .unclickable{
+    background-color: rgb(40,40,40);
+    span{
+      color: white;
+      font-size: 10px;
+    }
   }
 }
