@@ -1,22 +1,39 @@
 <div class="tim-sidenav-background">
 </div>
 <div class="tim-sidenav">
-  <div class="tim-sidenav-content-top"></div>
+  <div class="tim-sidenav-content-top">
+    <div class="avatar-and-logo-container">
+      <% if current_user.photo.attached? %>
+        <%= cl_image_tag current_user.photo.key %>
+      <% else %>
+        <%= image_tag 'balt.png', class: "sidenav-avatar" %>
+      <% end %>
+      <%= image_tag "logo_orange.png", class: "sidenav-logo" %>
+    </div>
+    <div class="username-container">
+      <p><%= current_user.username %></p>
+    </div>
+
+  </div>
   <div class="tim-sidenav-content-mid">
     <ul>
       <li><a class="tim-sidenav-link waves-effect waves-light" href=<%= pets_path %>><i class="material-icons">pets</i>My Pets</a></li>
       <li><a class="tim-sidenav-link waves-effect waves-light" href="#!"><i class="material-icons">mic</i>Video Library</a></li>
-      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!"><i class="fas fa-heart"></i>Stats Summary</a></li>
-      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!">Sources</a></li>
-      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!">Calendar</a></li>
-      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!">Alert Journal</a></li>
+      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!"><i class="material-icons">favorite</i>Stats Summary</a></li>
+      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!"><i class="material-icons">assignment</i>Alert Journal</a></li>
+      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!"><i class="material-icons">date_range</i>Calendar</a></li>
+      <li><a class="tim-sidenav-link waves-effect waves-light" href="#!"><i class="material-icons">usb</i>Connected Objects</a></li>
     </ul>
 
   </div>
   <div class="tim-sidenav-content-bottom">
     <ul>
-      <li><a class="tim-sidenav-link waves-effect" href="#!">Profile Settings</a></li>
-      <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "tim-sidenav-link waves-effect" %></li>
+      <li><a class="tim-sidenav-link waves-effect" href="#!"><i class="material-icons">settings</i>Profile Settings</a></li>
+      <li><%= link_to destroy_user_session_path, method: :delete, class: "tim-sidenav-link waves-effect" do %>
+        <i class="material-icons">exit_to_app</i>Log Out
+        <% end %>
+      </li>
     </ul>
   </div>
 </div>
+
