@@ -21,10 +21,6 @@ input#user_username:focus,input#user_email:focus,input#user_password:focus,input
 
 // }
 
-#new_user{
-  width: 80%;
-}
-
 #new_video{
   display: flex;
   flex-direction: column;
@@ -35,3 +31,48 @@ input#user_username:focus,input#user_email:focus,input#user_password:focus,input
     display: none;
   }
 }
+
+// SIGN UP --------------------------------
+
+#new_user{
+  width: 80%;
+}
+
+#user_photo{
+  display: none;
+}
+
+.icon-sign-up{
+  position: relative;
+  margin-top: 20px;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+
+  #new-user-placeholder{
+    color: $delph-orange;
+    font-size: 40px;
+  }
+
+  #new-user-pic-button{
+    position: absolute;
+    top: 0;
+    left: 70%;
+    background-color: $delph-orange;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  #valid-user-pic{
+    position: absolute;
+    top: 0;
+    left: 70%;
+    background-color: $delph-blue;
+    display: none;
+  }
+}
+
+//--------------------------------------------

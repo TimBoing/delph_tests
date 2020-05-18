@@ -4,7 +4,7 @@
   <div class="tim-sidenav-content-top">
     <div class="avatar-and-logo-container">
       <% if current_user.photo.attached? %>
-        <%= cl_image_tag current_user.photo.key %>
+        <%= cl_image_tag current_user.photo.key, class: "sidenav-avatar" %>
       <% else %>
         <%= image_tag 'balt.png', class: "sidenav-avatar" %>
       <% end %>
@@ -36,4 +36,5 @@
     </ul>
   </div>
 </div>
+
 

@@ -6,10 +6,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :pets
-  has_one_attached :photo
   validates :username, presence: true
+  has_one_attached :photo
 
   def login
     @login || self.username || self.email
   end
 end
+

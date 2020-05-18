@@ -6,6 +6,7 @@ import {newVideo} from '../components/newVideo.js'
 import {initForms} from '../components/forms.js'
 import {dropdownInit} from '../components/dropdownInit.js'
 import {gcharts} from '../components/gcharts.js'
+import {newUserPhoto} from '../components/newUserPhoto.js'
 
 initSideNav();
 newVideo();
@@ -14,3 +15,4 @@ dropdownInit();
 gcharts();
 // clWidget();
 // test();
+newUserPhoto();
