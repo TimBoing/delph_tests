@@ -4,7 +4,12 @@
   </div>
 </div>
 
-<div class="container centered-vertically">
+<div id="scale-me" class="container centered-vertically scale-transition scale-out">
+  <div class="icon-new-pet centered-vertically">
+    <i id ="new-pet-photo" class="material-icons">pets</i>
+    <a id="new-pet-photo-button" class="btn-floating pulse"><i class="material-icons">add_a_photo</i></a>
+    <a id="valid-pet-photo" class="btn-floating"><i class="material-icons">done</i></a>
+  </div>
   <p class="blue-title">REGISTER A NEW PET</p>
 
   <%= simple_form_for @pet do |f| %>
@@ -18,8 +23,10 @@
     <%= f.input :birth_date, input_html: {class: "datepicker"} %>
     <%= f.input :breed %>
 
-    <%= f.input :photo, as: :file %>
-    <%= f.button :submit %>
+    <%= f.input :photo, as: :file, label: false %>
+    <div class="centered-vertically">
+      <%= f.button :submit, "REGISTER", class: "button-orange" %>
+    </div>
   <% end %>
 
 

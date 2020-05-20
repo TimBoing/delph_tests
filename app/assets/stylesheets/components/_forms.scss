@@ -76,3 +76,47 @@ input#user_username:focus,input#user_email:focus,input#user_password:focus,input
 }
 
 //--------------------------------------------
+
+// NEW PET------------------------------------
+#new_pet{
+  width: 80%;
+}
+
+#pet_photo{
+  display: none;
+}
+
+.icon-new-pet{
+  position: relative;
+  margin-top: 20px;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+
+  #new-pet-photo{
+    color: $delph-orange;
+    font-size: 40px;
+  }
+
+  #new-pet-photo-button{
+    position: absolute;
+    top: 0;
+    left: 70%;
+    background-color: $delph-orange;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  #valid-pet-photo{
+    position: absolute;
+    top: 0;
+    left: 70%;
+    background-color: $delph-blue;
+    display: none;
+  }
+}
+
+//--------------------------------------------

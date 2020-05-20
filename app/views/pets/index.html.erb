@@ -5,9 +5,25 @@
 </div>
 
 
-<div class="container">
+<div class="container centered-vertically">
+
+
+  <% if @pets.length == 0 %>
+
+    <div id="intro-container" class="general-container centered-vertically">
+      <p class="blue-title">Welcome <%= current_user.username %>!</p>
+      <div class="arrow-container">
+        <i class="fas fa-chevron-down" id="arrow-down-1"></i>
+        <i class="fas fa-chevron-down" id="arrow-down-2"></i>
+        <i class="fas fa-chevron-down" id="arrow-down-3"></i>
+      </div>
+    </div>
+
+  <% else %>
+
 
   <div class="pet-cards centered-vertically">
+    <p class="blue-title">Hello <%= current_user.username %>!</p>
     <% @pets.each do |pet| %>
       <div class="pet-card">
 
@@ -25,6 +41,9 @@
       </div>
     <% end %>
   </div>
+
+<% end %>
+
 </div>
 
 <%= render 'shared/sidenav' %>

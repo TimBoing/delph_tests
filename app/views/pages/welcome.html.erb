@@ -1,0 +1,26 @@
+<div class="navbar-tim">
+  <div class="navbar-logo-container centered-vertically">
+    <%= image_tag "white_foot.png", alt: "alttext" %>
+  </div>
+</div>
+
+<div class="general-container centered-vertically">
+  <!-- div class="icon-sign-up centered-vertically">
+    <i id ="new-user-placeholder" class="material-icons">person_outline</i>
+    <a id="new-user-pic-button" class="btn-floating pulse"><i class="material-icons">add_a_photo</i></a>
+    <a id="valid-user-pic" class="btn-floating"><i class="material-icons">done</i></a>
+  </div> -->
+
+  <p class="blue-title" id="welcome-message" data-username="<%= current_user.username.upcase %>" style="text-align: center"></p>
+  <p class="blue-title scale-transition scale-out" id="add-pet-message" style="text-align: center">Lets start by creating the digital twin of your favorite pet!</p>
+  <!-- <p class="blue-title">WELCOME TO INTERPET <%= current_user.username.upcase %>!</p>
+  <p>Let start by creating a digital twin for your favorite pet!</p> -->
+  <%#= link_to "Add a new pet", new_pet_path %>
+
+<%= link_to new_pet_path do  %>
+  <div id="icon-welcome" class="centered-vertically scale-transition scale-out">
+      <i id ="new-user-placeholder" class="material-icons">add</i>
+  </div>
+<% end %>
+
+</div>

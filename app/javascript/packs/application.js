@@ -7,7 +7,12 @@ import {initForms} from '../components/forms.js'
 import {dropdownInit} from '../components/dropdownInit.js'
 import {gcharts} from '../components/gcharts.js'
 import {newUserPhoto} from '../components/newUserPhoto.js'
+import {newPetPhoto} from '../components/newPetPhoto.js'
+import {initIntro} from '../components/intro.js'
+import {welcomeTyped} from '../components/welcome.js'
+import {scaleIn} from '../components/scaleIn.js'
 
+initIntro();
 initSideNav();
 newVideo();
 initForms();
@@ -16,3 +21,6 @@ gcharts();
 // clWidget();
 // test();
 newUserPhoto();
+newPetPhoto();
+welcomeTyped();
+scaleIn();
