@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/welcome', to: 'pages#welcome'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :videos, only: [:new, :create]
+  # resources :videos, only: [:new]
   resources :pets do
-    resources :videos, only: [:index, :show]
+    resources :videos, only: [:index, :show, :create]
     resources :stats, only: [:index]
     get '/emotions', to: 'stats#emotions'
     get '/activity', to: 'stats#activity'

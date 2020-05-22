@@ -15,6 +15,7 @@
   </div>
 </div>
 
+
 <div class="pet-list-container">
   <ul id='show-pet-list' class='pet-list'>
     <% @pets.each do |pet| %>
@@ -25,32 +26,45 @@
 
 
 <div class="container">
+  <% if @pet_videos < 10 %>
+    <p style="text-align: center"> You still need to upload <strong><%= 10 - @pet_videos %></strong> videos of <%= @pet.name %> before you can access it´s stats!</p>
+  <% end %>
   <div class="stat-lines-container centered-vertically">
 
     <div class="stat-line">
-      <%= link_to pet_emotions_path(@pet), class: "stat-item" do  %>
+      <%#= link_to pet_emotions_path(@pet), class: "stat-item unclickable" do  %>
+      <%= link_to "#", class: "stat-item unclickable" do  %>
         <i class="fas fa-heart"></i>
         <p>Emotions</p>
+        <span>Coming Soon!</span>
       <% end %>
-      <%= link_to pet_activity_path(@pet), class: "stat-item" do  %>
+      <%#= link_to pet_activity_path(@pet), class: "stat-item unclickable" do  %>
+      <%= link_to "#", class: "stat-item unclickable" do  %>
         <i class="material-icons">pets</i>
         <p>Activity</p>
+        <span>Coming Soon!</span>
       <% end %>
-      <%= link_to pet_sleep_path(@pet), class: "stat-item" do  %>
+      <%#= link_to pet_sleep_path(@pet), class: "stat-item unclickable" do  %>
+      <%= link_to "#", class: "stat-item unclickable" do  %>
         <i class="far fa-moon"></i>
         <p>Sleep</p>
+        <span>Coming Soon!</span>
       <% end %>
     </div>
 
     <div class="stat-line">
 
-      <%= link_to pet_scratching_path(@pet), class: "stat-item" do  %>
+      <%#= link_to pet_scratching_path(@pet), class: "stat-item unclickable" do  %>
+      <%= link_to "#", class: "stat-item unclickable" do  %>
         <i class="fas fa-mitten"></i>
         <p>Scratching</p>
+        <span>Coming Soon!</span>
       <% end %>
-      <%= link_to pet_weight_path(@pet), class: "stat-item" do  %>
+      <%#= link_to pet_weight_path(@pet), class: "stat-item unclickable" do  %>
+      <%= link_to "#", class: "stat-item unclickable" do  %>
         <i class="fas fa-weight"></i>
         <p>Weight</p>
+        <span>Coming Soon!</span>
       <% end %>
       <%#= link_to pet_breathing_path(@pet), class: "stat-item" do  %>
       <div class="stat-item unclickable">

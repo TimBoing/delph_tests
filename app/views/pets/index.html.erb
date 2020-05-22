@@ -1,27 +1,21 @@
+<!-- <div class="navbar-tim">
+  <div class="navbar-logo-container centered-vertically">
+    <%#= image_tag "white_foot.png", alt: "alttext" %>
+  </div>
+</div> -->
+
 <div class="navbar-tim">
+  <div class="navbar-text">
+    <div class="navbar-title">MY PETS</div>
+  </div>
   <div class="navbar-logo-container centered-vertically">
     <%= image_tag "white_foot.png", alt: "alttext" %>
   </div>
+  <div class="pet-avatar"></div>
 </div>
 
 
 <div class="container centered-vertically">
-
-
-  <% if @pets.length == 0 %>
-
-    <div id="intro-container" class="general-container centered-vertically">
-      <p class="blue-title">Welcome <%= current_user.username %>!</p>
-      <div class="arrow-container">
-        <i class="fas fa-chevron-down" id="arrow-down-1"></i>
-        <i class="fas fa-chevron-down" id="arrow-down-2"></i>
-        <i class="fas fa-chevron-down" id="arrow-down-3"></i>
-      </div>
-    </div>
-
-  <% else %>
-
-
   <div class="pet-cards centered-vertically">
     <p class="blue-title">Hello <%= current_user.username %>!</p>
     <% @pets.each do |pet| %>
@@ -33,7 +27,7 @@
           <%= image_tag @img_placeholder %>
         <% end %>
 
-        <%= link_to pet_emotions_path(pet), class: "pet-image" do %>
+        <%= link_to pet_stats_path(pet), class: "pet-image" do %>
           <div class="pet-card-name-container">
             <span><%= pet.name.upcase %></span>
           </div>
@@ -41,9 +35,6 @@
       </div>
     <% end %>
   </div>
-
-<% end %>
-
 </div>
 
 <%= render 'shared/sidenav' %>
@@ -62,16 +53,20 @@
 
 <div id="video-confirmation" class="modal-video">
   <div class="modal-video-content centered-vertically">
-    <div id="upload-progress" class="progress">
+    <!-- <div id="upload-progress" class="progress">
       <div class="indeterminate"></div>
-    </div>
+    </div> -->
+    <% if @pets.length > 1 %>
+
+    <% end %>
     <div id ="cancel-upload" class="button-blue">CANCEL UPLOAD</div>
-    <%= simple_form_for(@video) do |f| %>
+    <%= simple_form_for [@pet, @video] do |f| %>
       <%= f.input :clip,as: :file, input_html: {id: 'file-upload'} %>
       <%= f.button :submit, "Upload Video", class: "button-orange", id: "upload-button" %>
     <% end %>
   </div>
 </div>
+
 
 
 

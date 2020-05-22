@@ -17,8 +17,9 @@ class VideosController < ApplicationController
 
   def create
 
+    @pet = Pet.find(params[:pet_id])
     video = Video.new(video_params)
-    video.pet = Pet.find(1)
+    video.pet = @pet
     if video.save
       redirect_to pet_videos_path(video.pet)
     end

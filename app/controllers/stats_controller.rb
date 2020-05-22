@@ -2,6 +2,8 @@ class StatsController < ApplicationController
   before_action :get_common_info
 
   def index
+    @pet = Pet.find(params[:pet_id])
+    @pet_videos = @pet.videos.count
 
   end
 

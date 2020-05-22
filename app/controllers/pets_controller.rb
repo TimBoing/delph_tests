@@ -5,6 +5,8 @@ class PetsController < ApplicationController
     # @jojo = current_user
     @pets = current_user.pets
     @img_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+
+    @pet = current_user.pets.first
     @video = Video.new
   end
 
