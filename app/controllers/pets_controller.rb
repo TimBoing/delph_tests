@@ -21,20 +21,32 @@ class PetsController < ApplicationController
     @emotions = @stats.select{|s| s.category == "Emotions"}.map{|s| [s.sub_category, s.value]}
     @activity = @stats.select{|s| s.category == "Activity"}.map{|s| [s.time, s.value]}
 
-
   end
 
   def new
     @pet = Pet.new
   end
 
-  def create
+  def edit_personality
 
+    @img_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    @pet = Pet.find(params[:pet_id])
+  end
+
+  def update
+
+    @pet = Pet.find(params[:id])
+    @pet.update(pet_params)
+    redirect_to pets_path
+
+  end
+
+  def create
     # raise
     @pet = Pet.new(pet_params)
     @pet.user = current_user
     if @pet.save
-      redirect_to pets_path
+      redirect_to pet_edit_personality_path(@pet)
     else
       render :new
     end
@@ -42,7 +54,7 @@ class PetsController < ApplicationController
 
   private
   def pet_params
-    params.require(:pet).permit(:name, :pet_type, :birth_date, :gender, :breed,:photo)
+    params.require(:pet).permit(:name, :pet_type, :birth_date, :gender, :breed,:photo, :openess, :conscientiousness, :extravertness, :agreableness, :stableness)
   end
 
 end

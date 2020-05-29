@@ -9,6 +9,7 @@ const newVideo = () => {
   const uploadBtn = document.getElementById("upload-button");
   const cancelBtn = document.getElementById("cancel-upload");
   const uploadProgress = document.getElementById("upload-progress");
+  const uploadForm = document.getElementById('new_video');
 
   window.addEventListener('click', (event) => {
     if(event.target == confModal)
@@ -16,7 +17,7 @@ const newVideo = () => {
   });
 
   uploadBtn.addEventListener('click', (event) => {
-    cancelBtn.style.display="none";
+    uploadForm.style.display="none";
     uploadProgress.style.display="block";
   });
 

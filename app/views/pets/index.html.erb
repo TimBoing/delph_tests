@@ -51,19 +51,83 @@
   <% end %>
 </div>
 
+
+
 <div id="video-confirmation" class="modal-video">
   <div class="modal-video-content centered-vertically">
-    <!-- <div id="upload-progress" class="progress">
-      <div class="indeterminate"></div>
-    </div> -->
-    <% if @pets.length > 1 %>
 
-    <% end %>
-    <div id ="cancel-upload" class="button-blue">CANCEL UPLOAD</div>
+   <!--  <%# if @pets.length > 1 %>
+      <p class="blue-title">Who is on the video?</p>
+      <div class="input-field col s12">
+        <select>
+          <%# @pets.each_with_index do |pet, index| %>
+            <option value="<%#= index %>"> <%#= pet.name %> </option>
+          <%# end %>
+        </select>
+      </div>
+    <%# end %> -->
+
+    <div id="upload-progress">
+      <div class="centered-vertically">
+        <div class="preloader-wrapper big active">
+         <div class="spinner-layer spinner-blue">
+           <div class="circle-clipper left">
+             <div class="circle"></div>
+           </div><div class="gap-patch">
+             <div class="circle"></div>
+           </div><div class="circle-clipper right">
+             <div class="circle"></div>
+           </div>
+         </div>
+
+         <div class="spinner-layer spinner-red">
+           <div class="circle-clipper left">
+             <div class="circle"></div>
+           </div><div class="gap-patch">
+             <div class="circle"></div>
+           </div><div class="circle-clipper right">
+             <div class="circle"></div>
+           </div>
+         </div>
+
+         <div class="spinner-layer spinner-yellow">
+           <div class="circle-clipper left">
+             <div class="circle"></div>
+           </div><div class="gap-patch">
+             <div class="circle"></div>
+           </div><div class="circle-clipper right">
+             <div class="circle"></div>
+           </div>
+         </div>
+
+         <div class="spinner-layer spinner-green">
+           <div class="circle-clipper left">
+             <div class="circle"></div>
+           </div><div class="gap-patch">
+             <div class="circle"></div>
+           </div><div class="circle-clipper right">
+             <div class="circle"></div>
+           </div>
+         </div>
+        </div>
+        <p class="blue-title">Your video is uploading!</p>
+      </div>
+    </div>
+
     <%= simple_form_for [@pet, @video] do |f| %>
+
+
+
+      <% if @pets.length > 1 %>
+        <p class="blue-title">Who is on the video?</p>
+        <%= f.input :pet_selected, collection: @pets, selected: @pets.first %>
+      <% end %>
+
       <%= f.input :clip,as: :file, input_html: {id: 'file-upload'} %>
       <%= f.button :submit, "Upload Video", class: "button-orange", id: "upload-button" %>
+      <div id ="cancel-upload" class="button-blue">CANCEL UPLOAD</div>
     <% end %>
+
   </div>
 </div>
 

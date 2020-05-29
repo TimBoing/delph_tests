@@ -16,8 +16,12 @@ class VideosController < ApplicationController
   end
 
   def create
+    if current_user.pets.length == 1
+      @pet = Pet.find(params[:pet_id])
+    else
+      @pet = Pet.find(pet_select[:pet_selected])
+    end
 
-    @pet = Pet.find(params[:pet_id])
     video = Video.new(video_params)
     video.pet = @pet
     if video.save
@@ -35,6 +39,10 @@ class VideosController < ApplicationController
 
   def video_params
     params.require(:video).permit(:clip)
+  end
+
+  def pet_select
+    params.require(:video).permit(:pet_selected)
   end
 
 end

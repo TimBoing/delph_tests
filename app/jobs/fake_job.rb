@@ -4,7 +4,7 @@ class FakeJob < ApplicationJob
   def perform
     # Do something later
     puts "I'm starting the fake job"
-    sleep 35
+    sleep 3
     puts "OK I'm done now"
   end
 end

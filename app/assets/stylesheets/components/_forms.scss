@@ -26,10 +26,19 @@ input#user_username:focus,input#user_email:focus,input#user_password:focus,input
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+
+  .video_pet_selected{
+    margin: 50px 0;
+  }
 
   #file-upload, label{
     display: none;
   }
+}
+
+#upload-progress{
+  display: none;
 }
 
 // SIGN UP --------------------------------
@@ -119,4 +128,68 @@ input#user_username:focus,input#user_email:focus,input#user_password:focus,input
   }
 }
 
+.datepicker-date-display{
+  background-color: $delph-orange;
+}
+
+.datepicker-table td.is-today{
+  color: $delph-blue;
+}
+
+
+.datepicker-table td.is-selected{
+  background-color: $delph-blue;
+  color: white;
+}
+
+.datepicker-footer{
+  .confirmation-btns{
+    button{
+      color: $delph-blue;
+
+    }
+  }
+}
+
 //--------------------------------------------
+
+// EDIT PET PERSONALITY -----------------------
+
+.edit_pet{
+  width: 80%;
+}
+
+.icon-new-pet{
+  img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+}
+
+div.form-group.range.optional input{
+  // margin: 10px 0;
+
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background: $delph-orange;
+}
+
+
+.range-lengend{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p{
+    // color: $delph-orange;
+    font-size: 0.8rem;
+    color: #9e9e9e;
+
+  }
+}
+
+
+//--------------------------------------------
+

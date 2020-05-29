@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   get '/welcome', to: 'pages#welcome'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # resources :videos, only: [:new]
+
+
   resources :pets do
+    get '/edit_personality', to: 'pets#edit_personality'
     resources :videos, only: [:index, :show, :create]
     resources :stats, only: [:index]
     get '/emotions', to: 'stats#emotions'

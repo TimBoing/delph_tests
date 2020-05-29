@@ -43,6 +43,11 @@ ActiveRecord::Schema.define(version: 2020_04_29_100047) do
     t.string "birth_date"
     t.string "gender"
     t.string "breed"
+    t.string "openess"
+    t.string "conscientiousness"
+    t.string "extravertness"
+    t.string "agreableness"
+    t.string "stableness"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_pets_on_user_id"

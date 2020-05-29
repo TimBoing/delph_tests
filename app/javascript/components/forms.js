@@ -3,21 +3,25 @@ const initForms = () => {
   const checkSelectors = () => {
     const elems = document.querySelectorAll('select');
     if(!elems) return;
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const instances = M.FormSelect.init(elems);
-    });
+    const instances = M.FormSelect.init(elems);
   }
 
   const checkDatePicker = () => {
-    document.addEventListener('DOMContentLoaded', function() {
-      const elems = document.querySelectorAll('.datepicker');
-      const instances = M.Datepicker.init(elems);
-    });
+    const elems = document.querySelectorAll('.datepicker');
+    const instances = M.Datepicker.init(elems);
   }
 
-  checkSelectors();
-  checkDatePicker();
+  const checkRangePickers = () => {
+    const elems = document.querySelectorAll("input[type=range]");
+    const instances = M.Range.init(elems);
+  }
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    checkSelectors();
+    checkDatePicker();
+    // checkRangePickers();
+  })
+
 }
 
 export{initForms};
