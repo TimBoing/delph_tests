@@ -123,7 +123,7 @@
         <%= f.input :pet_selected, collection: @pets, selected: @pets.first %>
       <% end %>
 
-      <%= f.input :clip,as: :file, input_html: {id: 'file-upload'} %>
+      <%= f.input :clip,as: :file, input_html: {id: 'file-upload', accept: "video/*"} %>
       <%= f.button :submit, "Upload Video", class: "button-orange", id: "upload-button" %>
       <div id ="cancel-upload" class="button-blue">CANCEL UPLOAD</div>
     <% end %>
