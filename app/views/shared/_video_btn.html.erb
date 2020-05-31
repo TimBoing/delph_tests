@@ -55,7 +55,7 @@
 
     <%= simple_form_for [@pet, @video] do |f| %>
       <% if @pets.length > 1 %>
-        <p class="blue-title" style="text-align: center;">Who is on the video?</p>
+        <p class="blue-title" style="text-align: center; width: 100%;">Who is on the video?</p>
         <%= f.input :pet_selected, collection: @pets, selected: @pets.first %>
       <% end %>
 
