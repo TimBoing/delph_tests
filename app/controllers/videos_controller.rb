@@ -42,6 +42,14 @@ class VideosController < ApplicationController
 
   end
 
+
+  def destroy
+    @pet = Pet.find(params[:pet_id])
+    @video = Video.find(params[:id])
+    @video.destroy
+    redirect_to pet_videos_path(@pet)
+  end
+
   private
 
   def video_params

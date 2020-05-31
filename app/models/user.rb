@@ -5,12 +5,13 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :pets
+  has_many :pets, dependent: :destroy
   validates :username, presence: true, uniqueness: true
-  has_one_attached :photo
+  has_one_attached :photo, dependent: :destroy
 
   def login
     @login || self.username || self.email
   end
 end
+
 

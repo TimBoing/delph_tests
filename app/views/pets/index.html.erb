@@ -14,6 +14,7 @@
     <p class="blue-title">Hello <%= current_user.username %>!</p>
     <% @pets.each do |pet| %>
       <div class="pet-card">
+        <div class="pet-image-container">
 
         <% if pet.photo.attached? %>
           <%= cl_image_tag pet.photo.key %>
@@ -25,12 +26,25 @@
           <% end %>
         <% end %>
 
-        <%= link_to pet_stats_path(pet), class: "pet-image" do %>
-          <div class="pet-card-name-container">
-            <span><%= pet.name.upcase %></span>
-          </div>
-        <% end %>
+        <div class="pet-card-name-container">
+          <span><%= pet.name.upcase %></span>
+        </div>
+
+        </div>
+
+        <div class="pet-actions">
+          <%= link_to pet_videos_path(pet) do %>
+            <i class="material-icons">mic</i>
+          <% end %>
+          <%= link_to pet_stats_path(pet) do %>
+            <i class="material-icons">favorite</i>
+          <% end %>
+          <%= link_to pet_path(pet), method: :delete, data: { confirm: "This will delete all data about #{pet.name}... are you sure?" } do%>
+            <i class="material-icons">remove_circle_outline</i>
+          <% end %>
+        </div>
       </div>
+
     <% end %>
   </div>
 </div>

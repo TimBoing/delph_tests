@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :pets do
     get '/edit_personality', to: 'pets#edit_personality'
-    resources :videos, only: [:index, :show, :create]
+    resources :videos, only: [:index, :show, :create, :destroy]
     resources :stats, only: [:index]
     get '/emotions', to: 'stats#emotions'
     get '/activity', to: 'stats#activity'
