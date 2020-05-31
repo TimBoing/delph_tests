@@ -7,12 +7,12 @@
 <div id="scale-me" class="container centered-vertically scale-transition scale-out">
   <div class="icon-new-pet centered-vertically">
     <% if @pet.photo.attached? %>
-      <%= cl_image_tag @pet.photo.key %>
+      <%= cl_image_tag @pet.photo.key, class: "avatar-like" %>
     <% else %>
       <% if @pet.pet_type == "Cat" %>
-        <%= image_tag @cat_placeholder %>
+        <%= image_tag @cat_placeholder, class: "avatar-like" %>
       <% else %>
-        <%= image_tag @dog_placeholder %>
+        <%= image_tag @dog_placeholder, class: "avatar-like" %>
       <% end %>
     <% end %>
   </div>
