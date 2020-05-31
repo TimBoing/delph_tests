@@ -8,9 +8,13 @@
   </div>
   <div id="show-pet-list-trigger"class="pet-avatar">
     <% if @pet.photo.attached? %>
-      <%= cl_image_tag @pet.photo.key %>
+      <%= cl_image_tag pet.photo.key %>
     <% else %>
-      <%= image_tag @img_placeholder %>
+      <% if @pet.pet_type == "Cat" %>
+        <%= image_tag @cat_placeholder %>
+      <% else %>
+        <%= image_tag @dog_placeholder %>
+      <% end %>
     <% end %>
   </div>
 </div>

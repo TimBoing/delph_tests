@@ -1,8 +1,15 @@
 class VideosController < ApplicationController
   def index
+
+    @title = "TRANSLATOR"
+    @dog_placeholder = "https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    @cat_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+
     @pet = Pet.find(params[:pet_id])
+    @pets = current_user.pets
+    @video = Video.new
+
     @videos = @pet.videos
-    @img_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 
   end
 
