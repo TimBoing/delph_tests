@@ -1,0 +1,32 @@
+.video-cards{
+  padding-top: 56px;
+  padding-bottom: 56px;
+
+}
+
+.video-card{
+  width: 80%;
+  height: 40vh;
+  border-radius: 16px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  margin: 10px;
+
+  .video-wrap{
+    height: 80%;
+
+
+    video{
+      border-radius: 16px 16px 0 0;
+      width: 100%;
+      background-color: black;
+    }
+
+  }
+
+  .video-description{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

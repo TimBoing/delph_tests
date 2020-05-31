@@ -1,9 +1,18 @@
 <%= render 'shared/navbar' %>
 
 <div class="container centered-vertically">
-  <% @videos.each do |video| %>
-    <%= cl_video_tag(video.clip.key, controls: true, width: '80%', height: 300, background: 'black') %>
-  <% end %>
+  <div class="video-cards centered-vertically">
+    <% @videos.each do |video| %>
+      <div class="video-card">
+        <div class="video-wrap centered-vertically">
+          <%= cl_video_tag(video.clip.key, controls: true, width: '100%', height: '100%') %>
+        </div>
+        <div class="video-description">
+          <p><%= video.created_at.strftime("Uploaded on %d/%m/%Y") %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <%= render 'shared/sidenav' %>
