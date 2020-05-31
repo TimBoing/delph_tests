@@ -5,7 +5,8 @@ class StatsController < ApplicationController
     @title = "SUMMARY"
     @dog_placeholder = "https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     @cat_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-
+    @pets = current_user.pets
+    @video = Video.new
 
     @pet = Pet.find(params[:pet_id])
     @pet_videos = @pet.videos.count
@@ -57,3 +58,5 @@ class StatsController < ApplicationController
   end
 
 end
+
+

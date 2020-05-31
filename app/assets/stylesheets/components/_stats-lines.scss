@@ -1,5 +1,23 @@
+.transversal-text{
+  position: absolute;
+  top: 80px;
+  width: 80%;
+  background: rgba(0,0,0,0.3);
+  color: white;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  text-align: center;
+  padding: 5px;
+
+  strong{
+    color: $delph-orange;
+  }
+
+}
+
 .stat-lines-container{
-  height: calc(100vh - 84px - 56px - 80px);
+  // height: calc(100vh - 84px - 56px - 80px);
+  margin-bottom: 100px;
+  margin-top: 56px;
 
 }
 
@@ -10,6 +28,7 @@
   justify-content: space-around;
   align-items: center;
   // margin: 20px 0 10px 0;
+  margin: 20px 0;
 
   .stat-item{
     border-radius: 16px;
@@ -17,6 +36,7 @@
     box-shadow: 0 2px 3px rgba(0,0,0,0.3);
     width: 30%;
     height: 80%;
+    min-height: 145px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,6 +53,7 @@
     p{
       color: $delph-orange;
       margin: 0;
+      text-align: center;
     }
 
     .no-data{

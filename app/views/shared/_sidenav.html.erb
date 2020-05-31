@@ -28,7 +28,7 @@
   </div>
   <div class="tim-sidenav-content-bottom">
     <ul>
-      <li><a class="tim-sidenav-link waves-effect" href="#!"><i class="material-icons">settings</i>Profile Settings</a></li>
+      <li><a class="tim-sidenav-link waves-effect" href=<%= edit_user_registration_path %>><i class="material-icons">settings</i>Profile Settings</a></li>
       <li><%= link_to destroy_user_session_path, method: :delete, class: "tim-sidenav-link waves-effect" do %>
         <i class="material-icons">exit_to_app</i>Log Out
         <% end %>
