@@ -15,6 +15,15 @@ class PagesController < ApplicationController
   def welcome
   end
 
+  def comming_soon
+    @pets = current_user.pets
+    @dog_placeholder = "https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    @cat_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    @pet = current_user.pets.first
+    @video = Video.new
+
+  end
+
   def test
     FakeJob.perform_later
   end

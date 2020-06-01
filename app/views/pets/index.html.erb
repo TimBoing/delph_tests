@@ -9,6 +9,7 @@
 </div>
 
 
+
 <div class="container centered-vertically">
   <div class="pet-cards centered-vertically">
     <p class="blue-title">Hello <%= current_user.username %>!</p>
@@ -36,8 +37,11 @@
           <%= link_to pet_videos_path(pet) do %>
             <i class="material-icons">mic</i>
           <% end %>
+          <%#= link_to pet_stats_path(pet) do %>
+            <!-- <i class="material-icons">favorite</i> -->
+          <%# end %>
           <%= link_to pet_stats_path(pet) do %>
-            <i class="material-icons">favorite</i>
+            <i class="fas fa-chart-pie" style="font-size: 19px;"></i>
           <% end %>
           <%= link_to pet_path(pet) do%>
             <i class="material-icons">edit</i>
