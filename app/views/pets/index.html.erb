@@ -39,9 +39,13 @@
           <%= link_to pet_stats_path(pet) do %>
             <i class="material-icons">favorite</i>
           <% end %>
-          <%= link_to pet_path(pet), method: :delete, data: { confirm: "This will delete all data about #{pet.name}... are you sure?" } do%>
-            <i class="material-icons">remove_circle_outline</i>
+          <%= link_to pet_path(pet) do%>
+            <i class="material-icons">edit</i>
           <% end %>
+
+          <%#= link_to pet_path(pet), method: :delete, data: { confirm: "This will delete all data about #{pet.name}... are you sure?" } do%>
+<!--             <i class="material-icons">remove_circle_outline</i>
+ -->          <%# end %>
         </div>
       </div>
 

@@ -33,6 +33,10 @@ const openModal = () => {
 const checkFile = () => {
   if(fileUpload.files.length > 0){
     clearInterval(myInterval);
+
+    const picOv = document.querySelector('.picture-overview');
+    picOv.insertAdjacentHTML('afterbegin', "<p>Yo<p>");
+
     openModal();
   }
 }
@@ -48,4 +52,5 @@ const actionBtnVideo = () => {
 
 export{newVideo};
 export{actionBtnVideo};
+
 

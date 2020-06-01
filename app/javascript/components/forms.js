@@ -8,7 +8,9 @@ const initForms = () => {
 
   const checkDatePicker = () => {
     const elems = document.querySelectorAll('.datepicker');
-    const instances = M.Datepicker.init(elems);
+    const thisYear = new Date().getFullYear();
+    const options = {'yearRange': [thisYear - 50,thisYear]}
+    const instances = M.Datepicker.init(elems, options);
   }
 
   const checkRangePickers = () => {

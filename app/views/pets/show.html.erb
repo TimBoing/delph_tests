@@ -1,72 +1,58 @@
-<div class="navbar-tim">
-  <div class="navbar-text">
-    <div class="navbar-title">SUMMARY</div>
-    <div class="navbar-pet-name"><%= @pet.name %></div>
-  </div>
-  <div class="navbar-logo-container centered-vertically">
-    <%= image_tag "white_foot.png", alt: "alttext" %>
-  </div>
-  <div id="show-pet-list-trigger"class="pet-avatar">
-    <% if @pet.photo.attached? %>
-      <%= cl_image_tag @pet.photo.key %>
-    <% else %>
-      <% if @pet.pet_type == "Cat" %>
-        <%= image_tag @cat_placeholder %>
-      <% else %>
-        <%= image_tag @dog_placeholder %>
-      <% end %>
-    <% end %>
-  </div>
-</div>
+<%= render 'shared/navbar' %>
 
-<div class="pet-list-container">
-  <ul id='show-pet-list' class='pet-list'>
-    <% @pets.each do |pet| %>
-      <li class="waves-effect waves-light"><%= link_to pet.name, pet_path(pet)  %></li>
-    <% end %>
-  </ul>
-</div>
-
-
-<!-- STATS----------------------------- -->
 
 <div class="container">
-  <%#= line_chart @stats.pluck(:time, :value), xtitle: "Time", ytitle: "Value" %>
-  <%#= scatter_chart @stats.group_by_month(:time).maximum(:value) %>
-  <%# data = @stats.map{|s| [s.time, s.value]} %>
-  <%#= @stats_by_month %>
-  <%#= scatter_chart @stats_by_month %>
 
-  <%#= scatter_chart data, xtitle: "Time", ytitle: "Value" %>
+  <div class="stat-lines-container centered-vertically">
+    <p class="blue-title" style="text-align: center">Want to edit <%= @pet.name %>´s profile?</p>
 
-  <div class="stat-card">
-    <div class="stat-card-left">
-      <div class="stat-card-title">EMOTIONS</div>
+
+    <div class="stat-line">
+      <%#= link_to pet_emotions_path(@pet), class: "stat-item unclickable" do  %>
+      <%= link_to "", id:"edit-pet-pic", class: "stat-item" do  %>
+        <i class="material-icons">add_a_photo</i>
+        <p>Edit<br>Picture</p>
+      <% end %>
+      <%#= link_to pet_activity_path(@pet), class: "stat-item unclickable" do  %>
+      <%= link_to edit_pet_path(@pet), class: "stat-item " do  %>
+        <i class="material-icons">pets</i>
+        <p>Edit<br>Main Info</p>
+      <% end %>
+      <%#= link_to pet_sleep_path(@pet), class: "stat-item unclickable" do  %>
     </div>
-    <div class="stat-card-right">
-      <%= pie_chart @emotions %>
+
+    <div class="stat-line">
+      <%= link_to pet_edit_personality_path(@pet), class: "stat-item" do  %>
+        <i class="material-icons">color_lens</i>
+        <p>Edit<br>Personality</p>
+      <% end %>
+      <%= link_to pet_path(@pet), method: :delete, data: { confirm: "This will delete all data about #{@pet.name}... are you sure?" }, class: "stat-item" do%>
+        <i class="material-icons">remove_circle_outline</i>
+        <p>Delete<br>Profile</p>
+      <% end %>
     </div>
   </div>
+</div>
 
-  <% @activity.each do |e| %>
-    <p><%= e %></p>
-  <% end %>
+<div id="pet-edit-picture-confirmation" class="modal-video">
+  <div class="modal-video-content centered-vertically">
+    <div class="picture-overview"></div>
+    <%= simple_form_for @pet do |f| %>
+      <%= f.input :photo, as: :file, label: false %>
+      <div class="centered-vertically">
+        <%= f.button :submit, "UPLOAD PIC",id: "confirm-pic-upload", class: "button-orange" %>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 
-<!-- STATS----------------------------- -->
 
 
 <%= render 'shared/sidenav' %>
 
-<div id="action-button" class="action-button btn-floating btn-large waves-effect waves-light cyan lighten-2">
-  <i class="material-icons" style="display: none">chevron_left</i>
-  <%= image_tag 'white_foot.png' %>
-</div>
-
 <div class="bottom-action-bar">
   <i id="options-menu" class="material-icons">dehaze</i>
-  <%#= link_to new_pet_path do  %>
-    <!-- <i class="material-icons" style="color: white">add</i> -->
-  <%# end %>
 </div>
+
+<%= render 'shared/video_btn' %>

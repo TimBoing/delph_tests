@@ -11,6 +11,7 @@ import {newPetPhoto} from '../components/newPetPhoto.js'
 import {initIntro} from '../components/intro.js'
 import {welcomeTyped} from '../components/welcome.js'
 import {scaleIn} from '../components/scaleIn.js'
+import {editPetPicture} from '../components/editPetPicture.js'
 
 initIntro();
 initSideNav();
@@ -24,3 +25,4 @@ newUserPhoto();
 newPetPhoto();
 welcomeTyped();
 scaleIn();
+editPetPicture();

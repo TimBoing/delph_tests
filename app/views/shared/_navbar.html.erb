@@ -27,6 +27,8 @@
         <li class="waves-effect waves-light"><%= link_to pet.name, pet_stats_path(pet)  %></li>
       <% elsif @title == "TRANSLATOR" %>
         <li class="waves-effect waves-light"><%= link_to pet.name, pet_videos_path(pet)  %></li>
+      <% elsif @title == "ABOUT" %>
+        <li class="waves-effect waves-light"><%= link_to pet.name, pet_path(pet)  %></li>
       <% end %>
     <% end %>
   </ul>
