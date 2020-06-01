@@ -192,4 +192,48 @@ input[type=range]::-webkit-slider-thumb {
 
 
 //--------------------------------------------
+//EDIT USER ACCOUNT------------------
+
+#edit_user{
+  width: 80%;
+}
+
+.icon-edit-profile{
+  position: relative;
+  margin-top: 20px;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+
+  .current-profile-pic{
+
+    img{
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+    }
+  }
+
+  #edit-user-pic-button{
+    position: absolute;
+    top: 0;
+    left: 70%;
+    background-color: $delph-orange;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  #valid-user-pic{
+    position: absolute;
+    top: 0;
+    left: 70%;
+    background-color: $delph-blue;
+    display: none;
+  }
+}
+
+//--------------------------------------------
 

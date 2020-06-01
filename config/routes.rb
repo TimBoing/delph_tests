@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => '/sidekiq'
 
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => :registrations }
   root to: 'pages#home'
   get '/welcome', to: 'pages#welcome'
   get '/comming-soon', to: 'pages#comming_soon'
