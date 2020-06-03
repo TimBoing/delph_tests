@@ -28,7 +28,7 @@ class VideosController < ApplicationController
     else
       @pet = Pet.find(pet_select[:pet_selected])
     end
-
+    # params[:video][:clip].headers += "; resource_type: video"
     video = Video.new(video_params)
     video.pet = @pet
     if video.save
