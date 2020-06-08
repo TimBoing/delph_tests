@@ -25,6 +25,7 @@ Rails.application.routes.draw do
     get '/butt_licking', to: 'stats#butt_licking'
     get '/plotting', to: 'stats#plotting'
     get '/kick_plants', to: 'stats#kick_plants'
+    get '/personality', to: 'stats#personality'
   end
 
 end
