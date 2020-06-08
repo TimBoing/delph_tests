@@ -148,6 +148,7 @@ class StatsController < ApplicationController
     end
 
     return personality
+  end
 
 end
 

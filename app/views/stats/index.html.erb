@@ -11,6 +11,11 @@
 
     <div class="stat-line">
       <%#= link_to pet_emotions_path(@pet), class: "stat-item unclickable" do  %>
+      <%= link_to pet_personality_path(@pet), class: "stat-item" do  %>
+        <i class="material-icons">color_lens</i>
+        <p>Personality</p>
+      <% end %>
+      <%#= link_to pet_emotions_path(@pet), class: "stat-item unclickable" do  %>
       <%= link_to "#", class: "stat-item unclickable" do  %>
         <i class="fas fa-heart"></i>
         <p>Emotions</p>
@@ -23,15 +28,14 @@
         <span>Coming Soon!</span>
       <% end %>
       <%#= link_to pet_sleep_path(@pet), class: "stat-item unclickable" do  %>
+    </div>
+
+    <div class="stat-line">
       <%= link_to "#", class: "stat-item unclickable" do  %>
         <i class="far fa-moon"></i>
         <p>Sleep</p>
         <span>Coming Soon!</span>
       <% end %>
-    </div>
-
-    <div class="stat-line">
-
       <%#= link_to pet_scratching_path(@pet), class: "stat-item unclickable" do  %>
       <%= link_to "#", class: "stat-item unclickable" do  %>
         <i class="fas fa-mitten"></i>
@@ -44,6 +48,9 @@
         <p>Weight</p>
         <span>Coming Soon!</span>
       <% end %>
+    </div>
+
+    <div class="stat-line">
       <%#= link_to pet_breathing_path(@pet), class: "stat-item" do  %>
       <div class="stat-item unclickable">
         <i class="fas fa-wind"></i>
@@ -51,9 +58,6 @@
         <span>Coming Soon!</span>
       </div>
       <%# end %>
-    </div>
-
-    <div class="stat-line">
       <%#= link_to pet_butt_licking_path(@pet), class: "stat-item" do  %>
       <div class="stat-item unclickable">
         <i class="far fa-grin-tongue-wink"></i>
@@ -65,13 +69,6 @@
       <div class="stat-item unclickable">
         <i class="fas fa-user-secret"></i>
         <p>Plotting</p>
-        <span>Coming Soon!</span>
-      </div>
-      <%# end %>
-      <%#= link_to pet_kick_plants_path(@pet), class: "stat-item" do  %>
-      <div class="stat-item unclickable">
-        <i class="fas fa-seedling"></i>
-        <p>Kicking plants</p>
         <span>Coming Soon!</span>
       </div>
       <%# end %>
