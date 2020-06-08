@@ -27,7 +27,7 @@ const newVideo = () => {
 }
 
 const openModal = () => {
-  confModal.style.display = "block";
+  confModal.style.display = "flex";
 }
 
 const checkFile = () => {
