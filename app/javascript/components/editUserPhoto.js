@@ -3,6 +3,9 @@ const editUserPhoto = () => {
   if(!triggerBtn) return;
   const hiddenBtn = document.getElementById('user_photo');
   const validationIcon = document.getElementById('valid-user-pic');
+  const submitBtn = document.getElementById('edit-user-submit');
+  const passField = document.getElementById('user_current_password');
+
   let myInterval;
 
   const checkFile = () => {
@@ -17,6 +20,14 @@ const editUserPhoto = () => {
   triggerBtn.addEventListener('click', (event) => {
     hiddenBtn.click();
     myInterval = setInterval(checkFile, 250);
+  });
+
+  submitBtn.addEventListener('click', (event) => {
+    if(passField.value === ""){
+      event.preventDefault();
+      alert("Please provide your current password")
+    }else{
+    }
   });
 
 

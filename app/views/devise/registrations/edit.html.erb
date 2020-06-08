@@ -49,12 +49,12 @@
     </div>
 
     <div class="form-actions centered-vertically">
-      <%= f.button :submit, "Update",class: "button-orange" %>
+      <%= f.button :submit, "Update",class: "button-orange", id: "edit-user-submit" %>
     </div>
   <% end %>
 
   <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-  <%= link_to "Back", :back %>
+  <%= link_to "Back", pets_path %>
 
 </div>
