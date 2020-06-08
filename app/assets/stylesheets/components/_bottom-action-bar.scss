@@ -207,6 +207,11 @@
     cursor: pointer;
   }
 
+  #pie-chart-icon-bottom-bar{
+    color: white;
+    font-size: 22px;
+  }
+
 }
 
 .pushed{
@@ -395,6 +400,11 @@
       100% 0,
       100% 100%,
       0 100%);
+
+  #pie-chart-icon-bottom-bar{
+    color: $delph-orange;
+    font-size: 22px;
+  }
 }
 
 .action-button{

@@ -31,6 +31,16 @@
         <li class="waves-effect waves-light"><%= link_to pet.name, pet_path(pet)  %></li>
       <% elsif @title == "PERSONALITY" %>
         <li class="waves-effect waves-light"><%= link_to pet.name, pet_personality_path(pet)  %></li>
+      <% elsif @title == "EMOTIONS" %>
+        <li class="waves-effect waves-light"><%= link_to pet.name, pet_emotions_path(pet)  %></li>
+      <% elsif @title == "ACTIVITY" %>
+        <li class="waves-effect waves-light"><%= link_to pet.name, pet_activity_path(pet)  %></li>
+      <% elsif @title == "SLEEP" %>
+        <li class="waves-effect waves-light"><%= link_to pet.name, pet_sleep_path(pet)  %></li>
+      <% elsif @title == "SCRATCHING" %>
+        <li class="waves-effect waves-light"><%= link_to pet.name, pet_scratching_path(pet)  %></li>
+      <% elsif @title == "WEIGHT" %>
+        <li class="waves-effect waves-light"><%= link_to pet.name, pet_weight_path(pet)  %></li>
       <% end %>
     <% end %>
   </ul>

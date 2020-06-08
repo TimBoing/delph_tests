@@ -1,13 +1,14 @@
 <%= render 'shared/navbar' %>
 
 <div class="container centered-vertically">
-  <p class="blue-title"><%= @pet.name %> is of personality <%= @pet_personality %></p>
+  <p class="blue-title"><%= @pet.name %> has personality n°<%= @pet_personality %></p>
+  <p>Openess Score : <%= @pet.openess %></p>
+  <p>Conscientiousness Score : <%= @pet.conscientiousness %></p>
+  <p>Extravertness Score : <%= @pet.extravertness %></p>
+  <p>Agreableness Score : <%= @pet.agreableness %></p>
+  <p>Stableness Score : <%= @pet.stableness %></p>
 </div>
 
 <%= render 'shared/sidenav' %>
-
-<div class="bottom-action-bar">
-  <i id="options-menu" class="material-icons">dehaze</i>
-</div>
-
+<%= render 'shared/stats_bottom_bar' %>
 <%= render 'shared/video_btn' %>

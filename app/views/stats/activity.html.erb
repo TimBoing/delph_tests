@@ -1,19 +1,4 @@
-<div class="navbar-tim">
-  <div class="navbar-text">
-    <div class="navbar-title">ACTIVITY</div>
-    <div class="navbar-pet-name"><%= @pet.name %></div>
-  </div>
-  <div class="navbar-logo-container centered-vertically">
-    <%= image_tag "white_foot.png", alt: "alttext" %>
-  </div>
-  <div id="show-pet-list-trigger"class="pet-avatar">
-    <% if @pet.photo.attached? %>
-      <%= cl_image_tag @pet.photo.key %>
-    <% else %>
-      <%= image_tag @img_placeholder %>
-    <% end %>
-  </div>
-</div>
+<%= render 'shared/navbar' %>
 
 <div class="pet-list-container">
   <ul id='show-pet-list' class='pet-list'>
@@ -32,5 +17,7 @@
 
 <%= render 'shared/sidenav' %>
 <%= render 'shared/stats_bottom_bar' %>
+<%= render 'shared/video_btn' %>
+
 
 

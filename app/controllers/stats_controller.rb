@@ -13,23 +13,69 @@ class StatsController < ApplicationController
 
   end
 
+  def personality
+    @title = "PERSONALITY"
+    @dog_placeholder = "https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    @cat_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    @pets = current_user.pets
+    @video = Video.new
+
+    @pet = Pet.find(params[:pet_id])
+    @pet_personality = pet_personality_check(@pet)
+  end
+
   def emotions
+    @title = "EMOTIONS"
+    @dog_placeholder = "https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    @cat_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    @pets = current_user.pets
+    @video = Video.new
+
+    @pet = Pet.find(params[:pet_id])
 
   end
 
   def activity
+    @title = "ACTIVITY"
+    @dog_placeholder = "https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    @cat_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    @pets = current_user.pets
+    @video = Video.new
+
+    @pet = Pet.find(params[:pet_id])
 
   end
 
   def sleep
+    @title = "SLEEP"
+    @dog_placeholder = "https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    @cat_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    @pets = current_user.pets
+    @video = Video.new
+
+    @pet = Pet.find(params[:pet_id])
 
   end
 
   def scratching
+    @title = "SCRATCHING"
+    @dog_placeholder = "https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    @cat_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    @pets = current_user.pets
+    @video = Video.new
+
+    @pet = Pet.find(params[:pet_id])
 
   end
 
   def weight
+    @title = "WEIGHT"
+    @dog_placeholder = "https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    @cat_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    @pets = current_user.pets
+    @video = Video.new
+
+    @pet = Pet.find(params[:pet_id])
 
   end
 
@@ -47,17 +93,6 @@ class StatsController < ApplicationController
 
   def kick_plants
 
-  end
-
-  def personality
-    @title = "PERSONALITY"
-    @dog_placeholder = "https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-    @cat_placeholder = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    @pets = current_user.pets
-    @video = Video.new
-
-    @pet = Pet.find(params[:pet_id])
-    @pet_personality = pet_personality_check(@pet)
   end
 
   private

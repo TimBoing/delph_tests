@@ -1,11 +1,7 @@
-<div id="action-button" class="action-button btn-floating btn-large waves-effect waves-light cyan lighten-2">
-  <i class="material-icons" style="display: none">chevron_left</i>
-  <%= image_tag 'white_foot.png' %>
-</div>
-
 <div class="bottom-action-bar">
   <i id="options-menu" class="material-icons">dehaze</i>
   <%= link_to pet_stats_path(@pet) do  %>
-    <i class="fas fa-chart-pie" style="color: white; font-size: 24px;"></i>
+    <i id="pie-chart-icon-bottom-bar" class="fas fa-chart-pie"></i>
   <% end %>
 </div>
+

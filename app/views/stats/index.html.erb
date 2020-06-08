@@ -4,9 +4,9 @@
 <div class="container">
 
   <div class="stat-lines-container centered-vertically">
-    <% if @pet_videos < 10 %>
+    <% if @pet_videos < 5 %>
       <!-- <p class="blue-title" style="text-align: center"> You still need to upload <strong><%#= 10 - @pet_videos %></strong> videos of <%#= @pet.name %> before you can access it´s stats!</p> -->
-      <p class="transversal-text">We still need <strong><%= 10 - @pet_videos %></strong> videos of <%= @pet.name %> to properly calibrate our prototype algorithm!</p>
+      <p class="transversal-text">We still need <strong><%= 5 - @pet_videos %></strong> videos of <%= @pet.name %> to properly calibrate our prototype algorithm!</p>
     <% end %>
 
     <div class="stat-line">
@@ -15,38 +15,38 @@
         <i class="material-icons">color_lens</i>
         <p>Personality</p>
       <% end %>
-      <%#= link_to pet_emotions_path(@pet), class: "stat-item unclickable" do  %>
-      <%= link_to "#", class: "stat-item unclickable" do  %>
+      <%= link_to pet_emotions_path(@pet), class: "stat-item" do  %>
+      <%#= link_to "#", class: "stat-item unclickable" do  %>
         <i class="fas fa-heart"></i>
         <p>Emotions</p>
-        <span>Coming Soon!</span>
+        <!-- <span>Coming Soon!</span> -->
       <% end %>
-      <%#= link_to pet_activity_path(@pet), class: "stat-item unclickable" do  %>
-      <%= link_to "#", class: "stat-item unclickable" do  %>
+      <%= link_to pet_activity_path(@pet), class: "stat-item" do  %>
+      <%#= link_to "#", class: "stat-item unclickable" do  %>
         <i class="material-icons">pets</i>
         <p>Activity</p>
-        <span>Coming Soon!</span>
+        <!-- <span>Coming Soon!</span> -->
       <% end %>
-      <%#= link_to pet_sleep_path(@pet), class: "stat-item unclickable" do  %>
     </div>
 
     <div class="stat-line">
-      <%= link_to "#", class: "stat-item unclickable" do  %>
+      <%= link_to pet_sleep_path(@pet), class: "stat-item" do  %>
+      <%#= link_to "#", class: "stat-item unclickable" do  %>
         <i class="far fa-moon"></i>
         <p>Sleep</p>
-        <span>Coming Soon!</span>
+        <!-- <span>Coming Soon!</span> -->
       <% end %>
-      <%#= link_to pet_scratching_path(@pet), class: "stat-item unclickable" do  %>
-      <%= link_to "#", class: "stat-item unclickable" do  %>
+      <%= link_to pet_scratching_path(@pet), class: "stat-item" do  %>
+      <%#= link_to "#", class: "stat-item unclickable" do  %>
         <i class="fas fa-mitten"></i>
         <p>Scratching</p>
-        <span>Coming Soon!</span>
+        <!-- <span>Coming Soon!</span> -->
       <% end %>
-      <%#= link_to pet_weight_path(@pet), class: "stat-item unclickable" do  %>
-      <%= link_to "#", class: "stat-item unclickable" do  %>
+      <%= link_to pet_weight_path(@pet), class: "stat-item" do  %>
+      <%#= link_to "#", class: "stat-item unclickable" do  %>
         <i class="fas fa-weight"></i>
         <p>Weight</p>
-        <span>Coming Soon!</span>
+        <!-- <span>Coming Soon!</span> -->
       <% end %>
     </div>
 
