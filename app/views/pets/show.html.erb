@@ -38,7 +38,7 @@
   <div class="modal-video-content centered-vertically">
     <div class="picture-overview"></div>
     <%= simple_form_for @pet do |f| %>
-      <%= f.input :photo, as: :file, label: false %>
+      <%= f.input :photo, as: :file, label: false, input_html: {accept: "image/*"} %>
       <div class="centered-vertically">
         <%= f.button :submit, "UPLOAD PIC",id: "confirm-pic-upload", class: "button-orange" %>
       </div>
