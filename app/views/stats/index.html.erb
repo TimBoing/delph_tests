@@ -6,7 +6,7 @@
   <div class="stat-lines-container centered-vertically">
     <% if @pet_videos < 10 %>
       <!-- <p class="blue-title" style="text-align: center"> You still need to upload <strong><%#= 10 - @pet_videos %></strong> videos of <%#= @pet.name %> before you can access it´s stats!</p> -->
-      <p class="transversal-text">You still need to upload <strong><%= 10 - @pet_videos %></strong> videos of <%= @pet.name %> before you can access it´s stats!</p>
+      <p class="transversal-text">We still need <strong><%= 10 - @pet_videos %></strong> videos of <%= @pet.name %> to properly calibrate our prototype algorithm!</p>
     <% end %>
 
     <div class="stat-line">
